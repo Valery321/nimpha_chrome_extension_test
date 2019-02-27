@@ -1,0 +1,69 @@
+﻿<!doctype html>
+<html lang="ru">
+<head>
+<title>test</title>
+<script src="popup.js"></script>
+<link href="popup.css" rel="stylesheet">
+</head>
+<body>
+<table class="main_table">
+  <tbody>
+    <tr>
+      <td class="buttons_box_td"><p><a href="javascript:void(0);" id="sending_3_requests_id" class="send_button">1) Отправка трех запросов к API (команды не имеют значение) последовательно, вывод результата после получения всех ответов.</a></p>
+        <p><a href="javascript:void(0);" id="sending_10_requests_id" class="send_button">2) Отправка десяти запросов к API (команды не имеют значение) синхронно, вывод результатов в порядке их составления сразу после получения последнего ответа.</a></p>
+        <p><a href="javascript:void(0);" id="sending_5_requests_id" class="send_button">3) Отправка пяти запросов к API (команды не имеют значение) синхронно, вывод результатов в любом порядке как только получен ответ от сервера.</a></p>
+        <p><a href="javascript:void(0);" id="all_book_api_request_id" class="send_button">4) Запрос к API всех книг, вывод книг только определенного автора с фильтром по ID. Фильтрация должна обязательно пройти на стороне расширения в JavaScript.</a></p></td>
+      <td class="res_box_td"><div class="title_div">НАБОР КОМАНДЫ</div>
+        <div id="command_set_div_id_1" class="command_set_div"> <strong>1)</strong>
+          <form action="javascript:void(0);">
+            <ol>
+            </ol>
+            <br>
+            <input id="sending_3_requests_submit_id" type="submit">
+            <input id="sending_3_requests_reset_id" name="reset" type="reset">
+          </form>
+        </div>
+        <div id="command_set_div_id_2" class="command_set_div"> <strong>2)</strong>
+          <form action="javascript:void(0);">
+            <ol>
+            </ol>
+            <br>
+            <input id="sending_10_requests_submit_id" type="submit">
+            <input id="sending_10_requests_reset_id" name="reset" type="reset">
+          </form>
+        </div>
+        <div id="command_set_div_id_3" class="command_set_div"> <strong>3)</strong>
+          <form action="javascript:void(0);">
+            <ol>
+            </ol>
+            <br>
+            <input id="sending_5_requests_submit_id" type="submit">
+            <input id="sending_5_requests_reset_id" name="reset" type="reset">
+          </form>
+        </div>
+        <div id="command_set_div_id_4" class="command_set_div"> <strong>4)</strong> <br>
+          <form action="javascript:void(0);">
+            <div class="request_content">ID автора:
+              <input id="all_book_api_authorid_id" type="text">
+              <br>
+              <br>
+              LIMIT:
+              <input id="all_book_api_limit_id" type="text">
+              (не обязательно)<br>
+              <br>
+              <strong>Вывод книг</strong> </div>
+            <br>
+            <input id="all_book_api_requests_submit_id" type="submit">
+            <input name="reset" type="reset">
+          </form>
+        </div>
+        <div class="dashed_separator_lin"></div>
+        <div id="result_box_id">
+          <div class="title_div">РЕЗУЛЬТАТ ВЫПОЛНЕНИЯ КОМАНДЫ</div>
+          <div id="result_div_id" class="result_div"> </div>
+        </div></td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>
